@@ -9,7 +9,6 @@ public class BruteForceAnnoyingProblem {
         ArrayList<String> solutions = new ArrayList<>();
         ArrayList<String> valuesToCheck = generatePossibleValues(7);
         for (String value : valuesToCheck) {
-//            System.out.println(value);
             if (
                     correctNumWrongPos("427", value, 1) &&
                             correctNumCorrectPos("490", value, 1) &&
@@ -36,12 +35,6 @@ public class BruteForceAnnoyingProblem {
             } else if (rulePosition != -1) {
                 countCorrect++;
             }
-//            if (testValue.equals("340")) {
-//                System.out.printf("testValue: %s ruleValue: %s\n", testValue, ruleValue);
-//                System.out.printf("testPosition: %d testDigit: %c rulePosition: %d\n", testPosition, testValue.charAt(testPosition), rulePosition);
-//                System.out.printf("countMatchRule: %d\n", countMatchRule);
-//                System.out.printf("countCorrect: %d\n", countCorrect);
-//            }
         }
         return (countMatchRule == numMatches) && (countCorrect == 0);
     }
@@ -85,7 +78,6 @@ public class BruteForceAnnoyingProblem {
         }
 
         for (int value = 0; value < numPossibleValues; value++) {
-//            System.out.println(StringUtils.leftPad(Integer.toString(value), 3, '0'));
             possibleValues.add(StringUtils.leftPad(Integer.toString(value), 3, '0'));
         }
         return possibleValues;
