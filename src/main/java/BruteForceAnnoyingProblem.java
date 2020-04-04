@@ -49,11 +49,6 @@ public class BruteForceAnnoyingProblem {
             } else if (rulePosition == testPosition) {
                 countCorrect++;
             }
-            if (testValue.equals("230")) {
-                System.out.printf("testValue: %s ruleValue: %s\n", testValue, ruleValue);
-                System.out.printf("testPosition: %d testDigit: %c rulePosition: %d\n", testPosition, testValue.charAt(testPosition), rulePosition);
-                System.out.printf("countMatchRule: %d\n", countMatchRule);
-            }
         }
         return (countMatchRule == numMatches) && (countCorrect == 0);
     }
